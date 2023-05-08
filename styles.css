@@ -29,3 +29,88 @@ html {
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
 }
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* When flex direction is column, the main axis is Y, so the 'justify content center' center vertically*/
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  align-self: center;
+  /*Align self overrides align-items. In this case align-items centers it horizontally because parent element has main axis in Y*/
+}
+
+.header--title-container{
+  width: 90%;
+  min-width: 288px; 
+  /* 
+  320px - 100%
+  ?     -  90%
+  = 288px
+  */
+  max-width: 900px;
+  /*In mobile it always has 90% but when it increases it size, the container only have a maxium of 900px to view info*, not more/*/
+  height: 218px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.header--title-container p {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+}
+
+.header--title-container .header--button {
+  position: absolute;
+  left: calc(50% - 114.5px); 
+  /*Its position on the left is calculated at the middle of screen (50%) minus the half of the button width*/
+  /*width is 229px, half of it is 114.5px*/
+  top: 270px;
+  display: block;
+  margin-top: 35px;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /*Sombra*/
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+  /* align-self: end; */
+  /*Because the position of this element is absolute, 'align -self' doesn't work*/
+}
+
+.header--button span {
+  display: inline-block;
+  /*I believe inline property is for mantain the svg in the same as the p text, and block is for manipulate his width and height*/
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url('./assets/icons/Vector.svg');
+}
