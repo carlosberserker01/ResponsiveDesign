@@ -114,3 +114,34 @@ header img {
   margin-left: 10px;
   background-image: url('./assets/icons/Vector.svg');
 }
+
+main {
+  width: 100%;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.main-exchange--title {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  /* This will position the image in the center of the container */
+  margin-bottom: 50px;
+  background-color: #1A9AF7;
+  /* background-image: url(https://static.wikia.nocookie.net/wikianimeotaku/images/b/b1/025Pikachu_XY_anime_3.png/revision/latest?cb=20160211185004&path-prefix=es); */
+}
